@@ -1,11 +1,8 @@
 name: Validate plugins
 
+# Pre-PR checks moved to local /verify; manual fallback only.
 on:
-  pull_request:
-    paths:
-      - ".cursor-plugin/marketplace.json"
-      - "**/plugin.json"
-      - "schemas/**"
+  workflow_dispatch:
 
 jobs:
   validate:
